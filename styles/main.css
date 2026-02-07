@@ -27,20 +27,27 @@ body {
 .hover {
     margin: auto;
     text-align: center;
-    font-size: 24px;
+    font-size: clamp(20px, 6vw, 24px);
     font-weight: bold;
     font-style: italic;
 }
 
+.hover a {
+    text-decoration: none;
+    padding: 0.25em 0.5em;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
 .hover span {
     font-style: normal;
-    font-weight: 100;
+    font-weight: 300;
     color: rgb(128, 128, 128);
 }
 
 .hover a:hover {
-    background-color: rgba(255, 179, 16, 0.349);
-    color: rgb(255, 0, 0);
+    background-color: rgba(255, 179, 16, 0.35);
+    color: #ff0000;
 }
 
 .background {
@@ -65,7 +72,8 @@ body {
     border-bottom: none;
     justify-content: center;
     padding-top: 15px;
-    padding-left: 50px;
+    padding-left: clamp(16px, 3vw, 50px);
+    padding-right: clamp(16px, 3vw, 50px);
     height: 300px;
 }
 
@@ -78,24 +86,26 @@ body {
 }
 
 .entry_button {
-    margin-top: 100px;
+    margin-top: clamp(40px, 4vw, 60px);
 }
 
 .entry_button a {
-    background-color: #555555;
-    color: rgb(255, 255, 255);
-    border: 2px solid rgb(155, 155, 155);
-    border-radius: 30px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
+    display: inline-block;
+    background-color: #555;
+    color: #fff;
+    border: 2px solid #9b9b9b;
+    border-radius: 999px;
+    font-size: clamp(16px, 4vw, 22px);
+    font-weight: 700;
     font-style: italic;
-    text-decoration-line: none;
-    padding: 12px 60px;
+    text-decoration: none;
+    padding: 0.75em 2.5em;
+    transition: all 0.2s ease;
 }
 
 .entry_button a:hover {
     background-color: #7e7e7e;
+    transform: translateY(-2px);
 }
 
 div.rect1 {
