@@ -9,32 +9,32 @@
 </head>
 
 <body>
-    <header class="hover">
-        <a href="index.html">Выход</a>
-        <a href="kino.html">Кинодел</a>
-    </header>
-
-    <h1>
-        <span style="font-size: 28px;">Arc Ege bot</span>
-    </h1>
-
-    <div>
-        <form action="">
-            <input type="text" title="Введите номер варианта КЕГЭ">
-            <button title="Запуск бота">Ввод</button>
-
-            <select name="" id="">
-                <option value="">Задача1</option>
-                <option value="">Задача2</option>
-                <option value="">Задача3</option>
-            </select>
-        </form>
+    <div class="indent">
+        <header class="hover">
+            <span>[</span>
+            <a href="index.html">Выход</a>
+            <span>|</span>
+            <a href="kino.html">Кинодел</a>
+            <span>]</span>
+        </header>
     </div>
 
-    <pre class="answer_box" id="answer" style="font-size: 20px;" hidden></pre>
+    <div class="container">
+        <h1>Извлечение ключей из варианта КЕГЭ</h1>
+
+        <div>
+            <input type="text" id="variantId" placeholder="ID варианта" value="25150371">
+            <button onclick="fetchVariant(document.getElementById('variantId').value)">Загрузить ключи</button>
+        </div>
+
+        <div id="stats" class="stats"></div>
+
+        <div id="keysList"></div>
+
+        <div id="output"></div>
+    </div>
 
     <script src="scripts/arc.js"></script>
-
 </body>
 
 </html>
