@@ -1,6 +1,6 @@
 async function fetchVariant(variantId) {
   const keysList = document.getElementById('keysList');
-  const statsDiv = document.getElementById('stats');
+  const statsDiv = document.getElementById('stats-wrap');
 
   keysList.innerHTML = '<p>Загрузка...</p>';
 
@@ -26,20 +26,21 @@ async function fetchVariant(variantId) {
     const data_len = data.data.length
 
     statsDiv.innerHTML = `
+    <div class="stats">
       <h3>Статистика варианта: ${escapeHtml(data.variant_id)}</h3>
       <p>Всего задач: ${data.data.length}</p>
+    </div>
     `;
 
     if (data.data.length > 0) {
       keysList.innerHTML = `
-        <h3>Ключи:</h3>
-        ${data.data.map((key, index) => `
-          <div class="key-item">
-            <span class="key-number">${index + 1})</span>
-            <span class="key-desc">Задача ${escapeHtml(key.number || '')}: <p>${escapeHtml(key.text || 'Нет описания')}</p></span>
-            <span class="key-value">${escapeHtml(key.key || '')}</span>
-          </div>
-        `).join('')}
+      ${data.data.map((key, index) => `
+        <div class="key-item">
+          <span class="key-number">${index + 1})</span>
+          <span class="key-desc">Задача ${escapeHtml(key.number || '')}: <p>${escapeHtml(key.text || 'Нет описания')}</p></span>
+          <span class="key-value">${escapeHtml(key.key || '')}</span>
+        </div>
+      `).join('')}
       `;
     } else {
       keysList.innerHTML = '<p>Ключи не найдены</p>';

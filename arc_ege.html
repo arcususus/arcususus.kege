@@ -9,30 +9,44 @@
 </head>
 
 <body>
-    <div class="indent">
-        <header class="hover">
-            <span>[</span>
-            <a href="index.html">Выход</a>
-            <span>|</span>
-            <a href="kino.html">Кинодел</a>
-            <span>]</span>
-        </header>
-    </div>
+    <div class="background">
 
-    <div class="container">
-        <h1>Извлечение ключей из варианта КЕГЭ</h1>
-
-        <div>
-            <input type="text" id="variantId" placeholder="ID варианта" value="25150371">
-            <button onclick="fetchVariant(document.getElementById('variantId').value)">Загрузить ключи</button>
+        <div class="indent">
+            <header class="hover">
+                <span>[</span>
+                <a href="index.html">Выход</a>
+                <span>|</span>
+                <a href="https://kinodel.amvera.io/index.html">Кинодел</a>
+                <span>]</span>
+            </header>
         </div>
 
-        <div id="stats" class="stats"></div>
+        <div class="format">
 
-        <div id="keysList"></div>
+            <div class="container">
+                <h1 class="head">Извлечение ключей из варианта КЕГЭ</h1>
 
-        <div id="output"></div>
+                <div input-block>
+
+                    <input type="text" id="variantId" placeholder="ID варианта" value="25150371">
+                    <button onclick="fetchVariant(document.getElementById('variantId').value)">Загрузить ключи
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
+
+    <div id="stats-wrap" class="stats-wrap"></div>
+    <div id="keysList"></div>
+    <div id="output"></div>
+
+    <div class="bottom"></div>
+    <div class="bottom"></div>
+    <footer class="bottom"></footer>
 
     <script src="scripts/arc.js"></script>
 </body>
