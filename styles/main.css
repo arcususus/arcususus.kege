@@ -126,7 +126,7 @@ body {
     margin-top: 10px;
     width: auto;
     height: 132px;
-    background-color: rgba(8, 44, 163, 0.5);
-    border: 68px double rgba(97, 82, 185, 0.5);
+    background-color: #1a163f;
+    border: 68px ridge rgba(97, 82, 185, 0.5);
     border-radius: 8px;
 }

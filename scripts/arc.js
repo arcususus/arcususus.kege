@@ -2,6 +2,7 @@ async function fetchVariant(variantId) {
   const keysList = document.getElementById('keysList');
   const statsDiv = document.getElementById('stats-wrap');
 
+  statsDiv.innerHTML = '';
   keysList.innerHTML = '<p>Загрузка...</p>';
 
   try {
@@ -56,6 +57,7 @@ async function fetchVariant(variantId) {
     }
 
   } catch (error) {
+    statsDiv.innerHTML = '';
     keysList.innerHTML = '';
     console.error('Fetch error:', error);
 
